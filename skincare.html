@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Produtos de Skin Care | Your Beleza</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><nav class="nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo Your Beleza"><span>Your Beleza</span></a>
+      <div class="menu"><a href="index.html">Início</a><a href="maquiagem.html">Maquiagem</a><a href="cabelo.html">Cabelo</a><a href="skincare.html">Skin Care</a></div>
+      <button class="cart">🛒 Carrinho <span id="cart-count">0</span></button>
+    </nav></header>
+<main class="container">
+<section class="page-hero"><span class="tag">Your Beleza</span><h1>Produtos de Skin Care</h1><p class="lead" style="margin:auto">Cuidado diário para uma pele iluminada. Arraste para o lado para ver mais produtos no carrossel.</p></section>
+<section class="section"><div class="carousel"><article class="product-card">
+      <img src="assets/produto-10.svg" alt="Sérum Iluminador">
+      <div class="product-info">
+        <h3>Sérum Iluminador</h3><p>Textura leve para glow natural</p><div class="price">R$ 54,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-5.svg" alt="Creme Hidratante">
+      <div class="product-info">
+        <h3>Creme Hidratante</h3><p>Hidratação diária para pele macia</p><div class="price">R$ 47,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-4.svg" alt="Gel de Limpeza">
+      <div class="product-info">
+        <h3>Gel de Limpeza</h3><p>Limpa sem ressecar a pele</p><div class="price">R$ 32,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-12.svg" alt="Protetor Facial">
+      <div class="product-info">
+        <h3>Protetor Facial</h3><p>Proteção com toque sequinho</p><div class="price">R$ 64,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-1.svg" alt="Tônico Pink Mist">
+      <div class="product-info">
+        <h3>Tônico Pink Mist</h3><p>Refresca e prepara a pele</p><div class="price">R$ 38,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article></div></section>
+<section class="section"><div class="offer"><div><h2>Monte sua rotina</h2><p class="lead">Escolha seus favoritos e acompanhe o carrinho no cabeçalho.</p></div><div class="offer-visual" style="background-image:url('assets/produto-10.svg')"></div></div></section>
+</main><footer class="footer"><b>Your Beleza</b><br><small>Produtos de beleza com estética delicada e profissional.</small></footer><script>
+let count = Number(localStorage.getItem('yourBelezaCart') || 0);
+const el = document.getElementById('cart-count');
+function renderCart(){ if(el) el.textContent = count; }
+function addToCart(){ count++; localStorage.setItem('yourBelezaCart', count); renderCart(); }
+renderCart();
+</script></body></html>

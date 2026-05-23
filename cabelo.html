@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Produtos de Cabelo | Your Beleza</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><nav class="nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo Your Beleza"><span>Your Beleza</span></a>
+      <div class="menu"><a href="index.html">Início</a><a href="maquiagem.html">Maquiagem</a><a href="cabelo.html">Cabelo</a><a href="skincare.html">Skin Care</a></div>
+      <button class="cart">🛒 Carrinho <span id="cart-count">0</span></button>
+    </nav></header>
+<main class="container">
+<section class="page-hero"><span class="tag">Your Beleza</span><h1>Produtos de Cabelo</h1><p class="lead" style="margin:auto">Hidratação, brilho e finalização. Arraste para o lado para ver mais produtos no carrossel.</p></section>
+<section class="section"><div class="carousel"><article class="product-card">
+      <img src="assets/produto-6.svg" alt="Shampoo Brilho Rosa">
+      <div class="product-info">
+        <h3>Shampoo Brilho Rosa</h3><p>Limpeza suave e perfumada</p><div class="price">R$ 34,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-11.svg" alt="Condicionador Seda">
+      <div class="product-info">
+        <h3>Condicionador Seda</h3><p>Hidratação e maciez imediata</p><div class="price">R$ 36,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-8.svg" alt="Óleo Reparador">
+      <div class="product-info">
+        <h3>Óleo Reparador</h3><p>Finalização com brilho intenso</p><div class="price">R$ 39,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-7.svg" alt="Máscara Nutrição">
+      <div class="product-info">
+        <h3>Máscara Nutrição</h3><p>Tratamento para cabelos ressecados</p><div class="price">R$ 49,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-5.svg" alt="Leave-in Glow">
+      <div class="product-info">
+        <h3>Leave-in Glow</h3><p>Proteção e controle de frizz</p><div class="price">R$ 44,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article></div></section>
+<section class="section"><div class="offer"><div><h2>Monte sua rotina</h2><p class="lead">Escolha seus favoritos e acompanhe o carrinho no cabeçalho.</p></div><div class="offer-visual" style="background-image:url('assets/produto-6.svg')"></div></div></section>
+</main><footer class="footer"><b>Your Beleza</b><br><small>Produtos de beleza com estética delicada e profissional.</small></footer><script>
+let count = Number(localStorage.getItem('yourBelezaCart') || 0);
+const el = document.getElementById('cart-count');
+function renderCart(){ if(el) el.textContent = count; }
+function addToCart(){ count++; localStorage.setItem('yourBelezaCart', count); renderCart(); }
+renderCart();
+</script></body></html>

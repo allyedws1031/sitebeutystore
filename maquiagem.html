@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Produtos de Maquiagem | Your Beleza</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><nav class="nav">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo Your Beleza"><span>Your Beleza</span></a>
+      <div class="menu"><a href="index.html">Início</a><a href="maquiagem.html">Maquiagem</a><a href="cabelo.html">Cabelo</a><a href="skincare.html">Skin Care</a></div>
+      <button class="cart">🛒 Carrinho <span id="cart-count">0</span></button>
+    </nav></header>
+<main class="container">
+<section class="page-hero"><span class="tag">Your Beleza</span><h1>Produtos de Maquiagem</h1><p class="lead" style="margin:auto">Make para todos os momentos. Arraste para o lado para ver mais produtos no carrossel.</p></section>
+<section class="section"><div class="carousel"><article class="product-card">
+      <img src="assets/produto-1.svg" alt="Batom Ruby Petals">
+      <div class="product-info">
+        <h3>Batom Ruby Petals</h3><p>Batom cremoso em tom romântico</p><div class="price">R$ 29,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-2.svg" alt="Base Soft Glow">
+      <div class="product-info">
+        <h3>Base Soft Glow</h3><p>Cobertura leve com acabamento natural</p><div class="price">R$ 59,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-3.svg" alt="Blush Cherry Soda">
+      <div class="product-info">
+        <h3>Blush Cherry Soda</h3><p>Blush rosado para efeito saudável</p><div class="price">R$ 36,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-9.svg" alt="Paleta Pink Mist">
+      <div class="product-info">
+        <h3>Paleta Pink Mist</h3><p>Sombras suaves para o dia a dia</p><div class="price">R$ 74,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article><article class="product-card">
+      <img src="assets/produto-7.svg" alt="Máscara Volume">
+      <div class="product-info">
+        <h3>Máscara Volume</h3><p>Cílios definidos e alongados</p><div class="price">R$ 42,90</div>
+        <button class="add" onclick="addToCart()">Adicionar ao carrinho</button>
+      </div>
+    </article></div></section>
+<section class="section"><div class="offer"><div><h2>Monte sua rotina</h2><p class="lead">Escolha seus favoritos e acompanhe o carrinho no cabeçalho.</p></div><div class="offer-visual" style="background-image:url('assets/produto-1.svg')"></div></div></section>
+</main><footer class="footer"><b>Your Beleza</b><br><small>Produtos de beleza com estética delicada e profissional.</small></footer><script>
+let count = Number(localStorage.getItem('yourBelezaCart') || 0);
+const el = document.getElementById('cart-count');
+function renderCart(){ if(el) el.textContent = count; }
+function addToCart(){ count++; localStorage.setItem('yourBelezaCart', count); renderCart(); }
+renderCart();
+</script></body></html>
